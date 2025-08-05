@@ -49,6 +49,8 @@ const Logo = () => (
 );
 
 export default function Landing() {
+  console.log("Landing component is rendering...");
+  
   const navigate = useNavigate();
 
   const handleNewUser = () => {

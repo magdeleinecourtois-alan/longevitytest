@@ -16,7 +16,7 @@ export default defineConfig(({ mode }) => ({
   build: {
     outDir: "dist/spa",
   },
-  plugins: [react(), expressPlugin()],
+  plugins: [react(), ...(mode === "build" ? [expressPlugin()] : [])],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./client"),
@@ -28,7 +28,7 @@ export default defineConfig(({ mode }) => ({
 function expressPlugin(): Plugin {
   return {
     name: "express-plugin",
-    apply: "serve", // Only apply during development (serve mode)
+    apply: "build", // Only apply during build mode
     configureServer(server) {
       const app = createServer();
 
