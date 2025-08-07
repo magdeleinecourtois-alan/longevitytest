@@ -169,7 +169,7 @@ export default function Questionnaires() {
 
         {/* Subtitle */}
         <div className="self-stretch text-[#0C0A66] text-justify font-montserrat text-[20px] font-normal leading-[125%] mb-8">
-          Answer the available questionnaire in order to unlock each week's new protocol.
+          Answer the available questionnaires in order to unlock each week's new protocol.
         </div>
 
         {/* Questionnaires List */}
