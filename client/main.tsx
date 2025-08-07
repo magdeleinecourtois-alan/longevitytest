@@ -7,6 +7,7 @@ import SignUp from "./pages/SignUp";
 import Login from "./pages/Login";
 import Index from "./pages/Index";
 import Tests from "./pages/Tests";
+import Questionnaires from "./pages/Questionnaires";
 import Protocols from "./pages/Protocols";
 import ProtocolSport from "./pages/ProtocolSport";
 import ProtocolNutrition from "./pages/ProtocolNutrition";
