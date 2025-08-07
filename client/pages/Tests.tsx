@@ -1,4 +1,5 @@
 import Layout from "@/components/Layout";
+import { useNavigate } from "react-router-dom";
 
 interface TestResultProps {
   title: string;
@@ -8,8 +9,6 @@ interface TestResultProps {
   hasNavigation?: boolean;
   navigationPath?: string;
 }
-
-import { useNavigate } from "react-router-dom";
 
 const TestResult: React.FC<TestResultProps> = ({ title, date, value, unit, hasNavigation, navigationPath }) => {
   const navigate = useNavigate();
@@ -31,7 +30,7 @@ const TestResult: React.FC<TestResultProps> = ({ title, date, value, unit, hasNa
               {date}
             </div>
           )}
-        </div>
+      </div>
       <div className="text-[#E8DEF8] font-montserrat leading-[125%]">
         {hasNavigation ? (
           <button
@@ -41,10 +40,8 @@ const TestResult: React.FC<TestResultProps> = ({ title, date, value, unit, hasNa
             View here
           </button>
         ) : (
-          <>
-            <span className="text-[40px] font-bold">{value}</span>
-            <span className="text-[20px] font-normal ml-1">{unit}</span>
-          </>
+          // Handle alternative rendering if no navigation
+          null
         )}
       </div>
     </div>
