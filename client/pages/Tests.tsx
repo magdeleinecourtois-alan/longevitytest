@@ -81,7 +81,7 @@ export default function Tests() {
       unit: "kg",
       date: "Made on September 8th, 2025"
     },
-    questionnaire: {
+    questionnaires: {
       navigationPath: "/questionnaires"
     },
     metrics: {
