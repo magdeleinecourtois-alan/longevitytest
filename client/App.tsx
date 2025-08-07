@@ -15,6 +15,7 @@ import ProtocolSleep from "./pages/ProtocolSleep";
 import ProtocolAdditionals from "./pages/ProtocolAdditionals";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import Questionnaires from "./pages/Questionnaires";
 
 const queryClient = new QueryClient();
 
@@ -33,6 +34,7 @@ const App = () => {
             <Route path="/login" element={<Login />} />
             <Route path="/overview" element={<Index />} />
             <Route path="/tests" element={<Tests />} />
+            <Route path="/questionnaires" element={<Questionnaires />} />
             <Route path="/protocols" element={<Protocols />} />
             <Route path="/protocols/sport" element={<ProtocolSport />} />
             <Route path="/protocols/nutrition" element={<ProtocolNutrition />} />
