@@ -40,8 +40,10 @@ const TestResult: React.FC<TestResultProps> = ({ title, date, value, unit, hasNa
             View here
           </button>
         ) : (
-          // Handle alternative rendering if no navigation
-          null
+          <>
+            <span className="text-[40px] font-bold">{value}</span>
+            <span className="text-[20px] font-normal ml-1">{unit}</span>
+          </>
         )}
       </div>
     </div>
