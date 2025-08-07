@@ -2,34 +2,44 @@ import Layout from "@/components/Layout";
 
 interface TestResultProps {
   title: string;
-  date: string;
+  date?: string;
   value?: string;
   unit?: string;
-  hasLink?: boolean;
-  linkUrl?: string;
+  hasNavigation?: boolean;
+  navigationPath?: string;
 }
 
-const TestResult: React.FC<TestResultProps> = ({ title, date, value, unit, hasLink, linkUrl }) => {
+import { useNavigate } from "react-router-dom";
+
+const TestResult: React.FC<TestResultProps> = ({ title, date, value, unit, hasNavigation, navigationPath }) => {
+  const navigate = useNavigate();
+
+  const handleNavigation = () => {
+    if (navigationPath) {
+      navigate(navigationPath);
+    }
+  };
+  
   return (
     <div className="flex h-[87px] p-5 justify-between items-center flex-1 rounded-[20px] bg-gradient-to-b from-[#838CF8] to-[#5D58DD]">
       <div className="flex flex-col justify-center items-start gap-[3px]">
         <div className="text-[#E8DEF8] font-montserrat text-[20px] font-bold leading-[125%]">
           {title}
         </div>
-        <div className="text-[#E8DEF8] font-montserrat text-[15px] font-normal leading-[125%]">
-          {date}
+          {date && (
+            <div className="text-[#E8DEF8] font-montserrat text-[15px] font-normal leading-[125%]">
+              {date}
+            </div>
+          )}
         </div>
-      </div>
       <div className="text-[#E8DEF8] font-montserrat leading-[125%]">
-        {hasLink ? (
-          <a 
-            href={linkUrl} 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="text-[#0C0A66] font-montserrat text-[20px] font-bold leading-[125%] hover:underline"
+        {hasNavigation ? (
+          <button
+            onClick={handleNavigation} 
+            className="text-[#0C0A66] font-montserrat text-[20px] font-bold leading-[125%] hover:underline cursor-point"
           >
-            Link here
-          </a>
+            View here
+          </button>
         ) : (
           <>
             <span className="text-[40px] font-bold">{value}</span>
@@ -73,8 +83,7 @@ export default function Tests() {
       date: "Made on September 8th, 2025"
     },
     questionnaire: {
-      date: "Made on September 8th, 2025",
-      linkUrl: "https://example.com/questionnaire" // Replace with actual link
+      navigationPath: "/questionnaires"
     },
     metrics: {
       energy: 80,
@@ -103,13 +112,12 @@ export default function Tests() {
             />
           </div>
 
-          {/* Questionnaire */}
+          {/* Questionnaires */}
           <div className="flex w-full items-center gap-5">
             <TestResult
-              title="Questionnaire"
-              date={testResults.questionnaire.date}
-              hasLink={true}
-              linkUrl={testResults.questionnaire.linkUrl}
+              title="Questionnaires"
+              hasNavigation={true}
+              navigationPath={testResults.questionnaires.navigationPath}
             />
           </div>
 
