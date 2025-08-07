@@ -8,6 +8,7 @@ import Landing from "./pages/Landing";
 import SignUp from "./pages/SignUp";
 import Login from "./pages/Login";
 import Tests from "./pages/Tests";
+import Questionnaires from "./pages/Questionnaires";
 import Protocols from "./pages/Protocols";
 import ProtocolSport from "./pages/ProtocolSport";
 import ProtocolNutrition from "./pages/ProtocolNutrition";
@@ -15,7 +16,6 @@ import ProtocolSleep from "./pages/ProtocolSleep";
 import ProtocolAdditionals from "./pages/ProtocolAdditionals";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
-import Questionnaires from "./pages/Questionnaires";
 
 const queryClient = new QueryClient();
 
