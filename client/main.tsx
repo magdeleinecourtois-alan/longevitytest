@@ -33,6 +33,7 @@ if (rootElement) {
         React.createElement(Route, { key: "login", path: "/login", element: React.createElement(Login) }),
         React.createElement(Route, { key: "overview", path: "/overview", element: React.createElement(Index) }),
         React.createElement(Route, { key: "tests", path: "/tests", element: React.createElement(Tests) }),
+        React.createElement(Route, { key: "questionnaires", path: "/questionnaires", element: React.createElement(Questionnaires) }),
         React.createElement(Route, { key: "protocols", path: "/protocols", element: React.createElement(Protocols) }),
         React.createElement(Route, { key: "sport", path: "/protocols/sport", element: React.createElement(ProtocolSport) }),
         React.createElement(Route, { key: "nutrition", path: "/protocols/nutrition", element: React.createElement(ProtocolNutrition) }),
