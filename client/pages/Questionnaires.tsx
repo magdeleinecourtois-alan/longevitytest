@@ -39,5 +39,15 @@ export default function Questionnaires() {
     // ... 5 more questionnaires with progressive unlock days
   ];
 
-  // Progressive unlocking logic and rendering...
+  return (
+    <Layout>
+      <div className="text-2xl font-bold text-[#0C0A66] mb-6">Questionnaires</div>
+      <div>
+        {questionnaires.map((q) => (
+          <div key={q.id}>{q.title}</div>
+        ))}
+      </div>
+    </Layout>
+  );
+
 }
