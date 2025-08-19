@@ -79,7 +79,7 @@ export default function Tests() {
     metrics: {
       energy: 80,
       mental: 75,
-      digestion: 82
+      sleep: 82
     }
   };
 
@@ -125,7 +125,7 @@ export default function Tests() {
             />
             <MetricCard
               title="Digestion"
-              value={testResults.metrics.digestion}
+              value={testResults.metrics.sleep}
             />
           </div>
         </div>
