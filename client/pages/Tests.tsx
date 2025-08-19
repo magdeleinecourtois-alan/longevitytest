@@ -131,7 +131,7 @@ export default function Tests() {
               value={testResults.metrics.mental}
             />
             <MetricCard
-              title="Digestion"
+              title="Sleep"
               value={testResults.metrics.sleep}
             />
           </div>
